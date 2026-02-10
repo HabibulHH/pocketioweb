@@ -75,9 +75,6 @@ export default function Navbar() {
                   </a>
                   
 
-
-
-
                   
                   <a
                     href="#solutions"
