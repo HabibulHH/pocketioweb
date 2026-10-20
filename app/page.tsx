@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { company } from "@/lib/company";
 
 export default function Home() {
   return (
@@ -56,15 +57,15 @@ export default function Home() {
 
             {/* CTA Buttons */}
             <div className="mt-12 flex justify-center gap-4 flex-wrap">
-              <button className="group bg-orange-500 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-orange-600 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
-                Explore Our Solutions
+              <a href="#products" className="group bg-orange-500 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-orange-600 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
+                View Products
                 <svg className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </button>
-              <button className="bg-white dark:bg-gray-900 text-orange-600 dark:text-orange-400 px-10 py-4 rounded-xl font-semibold text-lg border-2 border-orange-500 dark:border-orange-500 hover:bg-orange-50 dark:hover:bg-gray-800 transition-all duration-300 shadow-md hover:shadow-lg">
-                View Products
-              </button>
+              </a>
+              <a href="#contact" className="bg-white dark:bg-gray-900 text-orange-600 dark:text-orange-400 px-10 py-4 rounded-xl font-semibold text-lg border-2 border-orange-500 dark:border-orange-500 hover:bg-orange-50 dark:hover:bg-gray-800 transition-all duration-300 shadow-md hover:shadow-lg">
+                Contact Us
+              </a>
             </div>
 
             {/* Stats/Trust Indicators */}
@@ -106,11 +107,8 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* EdTech Platform */}
-            <a
-              href="https://your-edtech-platform.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative bg-gradient-to-br from-orange-50 to-amber-50 dark:from-gray-900 dark:to-black p-8 rounded-2xl border-2 border-orange-100 dark:border-gray-800 hover:border-orange-300 dark:hover:border-orange-500 transition-all duration-300 hover:shadow-xl cursor-pointer block"
+            <div
+              className="group relative bg-gradient-to-br from-orange-50 to-amber-50 dark:from-gray-900 dark:to-black p-8 rounded-2xl border-2 border-orange-100 dark:border-gray-800 hover:border-orange-300 dark:hover:border-orange-500 transition-all duration-300 hover:shadow-xl block"
             >
               <div className="absolute top-4 right-4">
                 <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -128,14 +126,11 @@ export default function Home() {
                 <span className="px-3 py-1 bg-orange-200 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-xs font-medium">AI Learning</span>
                 <span className="px-3 py-1 bg-orange-200 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-xs font-medium">Analytics</span>
               </div>
-            </a>
+            </div>
 
             {/* Hotel Booking System */}
-            <a
-              href="https://your-hotel-booking.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative bg-gradient-to-br from-orange-50 to-amber-50 dark:from-gray-900 dark:to-black p-8 rounded-2xl border-2 border-orange-100 dark:border-gray-800 hover:border-orange-300 dark:hover:border-orange-500 transition-all duration-300 hover:shadow-xl cursor-pointer block"
+            <div
+              className="group relative bg-gradient-to-br from-orange-50 to-amber-50 dark:from-gray-900 dark:to-black p-8 rounded-2xl border-2 border-orange-100 dark:border-gray-800 hover:border-orange-300 dark:hover:border-orange-500 transition-all duration-300 hover:shadow-xl block"
             >
               <div className="absolute top-4 right-4">
                 <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -153,14 +148,11 @@ export default function Home() {
                 <span className="px-3 py-1 bg-orange-200 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-xs font-medium">PMS</span>
                 <span className="px-3 py-1 bg-orange-200 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-xs font-medium">Revenue Mgmt</span>
               </div>
-            </a>
+            </div>
 
             {/* WhatsApp CRM */}
-            <a
-              href="https://your-whatsapp-crm.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative bg-gradient-to-br from-orange-50 to-amber-50 dark:from-gray-900 dark:to-black p-8 rounded-2xl border-2 border-orange-100 dark:border-gray-800 hover:border-orange-300 dark:hover:border-orange-500 transition-all duration-300 hover:shadow-xl cursor-pointer block"
+            <div
+              className="group relative bg-gradient-to-br from-orange-50 to-amber-50 dark:from-gray-900 dark:to-black p-8 rounded-2xl border-2 border-orange-100 dark:border-gray-800 hover:border-orange-300 dark:hover:border-orange-500 transition-all duration-300 hover:shadow-xl block"
             >
               <div className="absolute top-4 right-4">
                 <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -171,21 +163,18 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 mt-8">WhatsApp CRM</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Customer relationship management built for WhatsApp Business with automation and multi-agent support
+                Customer relationship management built on the official WhatsApp Business Platform, with automation and multi-agent support
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-orange-200 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-xs font-medium">Automation</span>
                 <span className="px-3 py-1 bg-orange-200 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-xs font-medium">Multi-Agent</span>
                 <span className="px-3 py-1 bg-orange-200 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-xs font-medium">Broadcasts</span>
               </div>
-            </a>
+            </div>
 
             {/* Ecommerce */}
-            <a
-              href="https://your-ecommerce.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative bg-gradient-to-br from-orange-50 to-amber-50 dark:from-gray-900 dark:to-black p-8 rounded-2xl border-2 border-orange-100 dark:border-gray-800 hover:border-orange-300 dark:hover:border-orange-500 transition-all duration-300 hover:shadow-xl cursor-pointer block"
+            <div
+              className="group relative bg-gradient-to-br from-orange-50 to-amber-50 dark:from-gray-900 dark:to-black p-8 rounded-2xl border-2 border-orange-100 dark:border-gray-800 hover:border-orange-300 dark:hover:border-orange-500 transition-all duration-300 hover:shadow-xl block"
             >
               <div className="absolute top-4 right-4">
                 <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -203,14 +192,11 @@ export default function Home() {
                 <span className="px-3 py-1 bg-orange-200 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-xs font-medium">Payments</span>
                 <span className="px-3 py-1 bg-orange-200 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-xs font-medium">Inventory</span>
               </div>
-            </a>
+            </div>
 
             {/* AI Agents */}
-            <a
-              href="https://your-ai-agents.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative bg-gradient-to-br from-orange-50 to-amber-50 dark:from-gray-900 dark:to-black p-8 rounded-2xl border-2 border-orange-100 dark:border-gray-800 hover:border-orange-300 dark:hover:border-orange-500 transition-all duration-300 hover:shadow-xl cursor-pointer block lg:col-span-2"
+            <div
+              className="group relative bg-gradient-to-br from-orange-50 to-amber-50 dark:from-gray-900 dark:to-black p-8 rounded-2xl border-2 border-orange-100 dark:border-gray-800 hover:border-orange-300 dark:hover:border-orange-500 transition-all duration-300 hover:shadow-xl block lg:col-span-2"
             >
               <div className="absolute top-4 right-4">
                 <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -229,7 +215,63 @@ export default function Home() {
                 <span className="px-3 py-1 bg-orange-200 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-xs font-medium">NLP</span>
                 <span className="px-3 py-1 bg-orange-200 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-xs font-medium">ML</span>
               </div>
-            </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20 border-t border-orange-100 dark:border-gray-900">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              About {company.name}
+            </h2>
+            <div className="space-y-4 text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p>
+                {company.name} is a software company based in Dhaka, Bangladesh. We design, build and run
+                software for businesses, including learning platforms, hotel booking, ecommerce, AI agents
+                and customer messaging tools.
+              </p>
+              <p>
+                Our WhatsApp CRM is built on the official WhatsApp Business Platform. Businesses connect
+                their own WhatsApp Business accounts, manage customer conversations in a shared inbox and
+                send approved message templates. Each business keeps ownership of its WhatsApp account and
+                its customer data.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 border-t border-orange-100 dark:border-gray-900">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-10">
+            Contact
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-8 rounded-2xl border-2 border-orange-100 dark:border-gray-800">
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Office</h3>
+              <address className="not-italic text-gray-600 dark:text-gray-400">
+                {company.name}
+                {company.addressLines.map((line) => (
+                  <span key={line} className="block">{line}</span>
+                ))}
+              </address>
+            </div>
+            <div className="p-8 rounded-2xl border-2 border-orange-100 dark:border-gray-800">
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Phone</h3>
+              <a href={company.phoneHref} className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400">
+                {company.phone}
+              </a>
+            </div>
+            <div className="p-8 rounded-2xl border-2 border-orange-100 dark:border-gray-800">
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Email</h3>
+              <a href={`mailto:${company.email}`} className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400">
+                {company.email}
+              </a>
+            </div>
           </div>
         </div>
       </section>

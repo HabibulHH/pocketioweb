@@ -16,8 +16,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "PocketIO - Welcome",
-  description: "Build amazing applications with Next.js and Tailwind CSS",
+  title: "Pocket IO",
+  description:
+    "Pocket IO is a software company in Dhaka, Bangladesh, building business software and WhatsApp Business messaging tools.",
 };
 
 export default function RootLayout({
